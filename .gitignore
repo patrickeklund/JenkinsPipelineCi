@@ -1,0 +1,28 @@
+### Maven ###
+target/
+bin/
+!.mvn/wrapper/maven-wrapper.jar
+*.versionsBackup
+
+### Docker ###
+.env
+
+### Git ###
+gitCredentialStore
+
+### eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Misc ###
+*.log
