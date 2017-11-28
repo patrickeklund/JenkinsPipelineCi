@@ -6,6 +6,7 @@ USER="<username>"
 PASSWORD="<password>"
 
 BUCKET="<nexus repo name>"
+TAG_TO_REMOVE="\\-SNAPSHOT"
 KEEP_IMAGES=10
 
 # Get all Images related to a Repo
@@ -21,7 +22,7 @@ for IMAGE_NAME in ${IMAGES}; do
 
     # Remove any none SNAPSHOT Tag
     for TAG in ${TAGS} ; do
-        if ( echo ${TAG} | grep \\-SNAPSHOT ) ; then
+        if ( echo ${TAG} | grep ${TAG_TO_REMOVE} ) ; then
             ONLY_SNAPSHOTS_TAGS="${ONLY_SNAPSHOTS_TAGS} ${TAG}"
         fi
     done
