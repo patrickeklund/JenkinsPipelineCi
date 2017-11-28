@@ -68,10 +68,10 @@ for repo in ${reposToGet} ; do
     echo
     echo "*** Filter all Authors to anonymous"
     git filter-branch -f --env-filter '
-    export GIT_AUTHOR_NAME="getswish"
-    export GIT_AUTHOR_EMAIL="getswish@getswish.se"
-    export GIT_COMMITTER_NAME="getswish"
-    export GIT_COMMITTER_EMAIL="getswish@getswish.se"
+    export GIT_AUTHOR_NAME="anonymous_user"
+    export GIT_AUTHOR_EMAIL="anonymous_user@anonymous_user.com"
+    export GIT_COMMITTER_NAME="anonymous_user"
+    export GIT_COMMITTER_EMAIL="anonymous_user@anonymous_user.com"
     ' --tag-name-filter cat -- --branches --tags
     echo
     echo
