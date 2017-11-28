@@ -1,33 +1,7 @@
 #!/bin/bash
 set -e
-reposToGet="                    \
-    branding-import-tool        \
-    data-masking-tool           \
-    environment                 \
-    func-test                   \
-    global-jenkins-libraries    \
-    jms-backout-to-bir          \
-    jms-message-transporter     \
-    loadtest                    \
-    performance-tool            \
-    swish-asc                   \
-    swish-base                  \
-    swish-brr                   \
-    swish-bsm                   \
-    swish-bvm                   \
-    swish-cis                   \
-    swish-commerce-security     \
-    swish-epb                   \
-    swish-hystrix-dashboard     \
-    swish-mss                   \
-    swish-mts                   \
-    swish-ph                    \
-    swish-pnm                   \
-    swish-qr-code-generator     \
-    swish-shared-installation   \
-    swish-shared-libraries      \
-    swish-spb                   \
-    test-client                 \
+reposToGet="               \
+    JenkinsPipelineCi      \
     "
 
 currentWorkingDirectory=`pwd`
@@ -60,7 +34,7 @@ for repo in ${reposToGet} ; do
 
     echo
     echo "*** Getting Repo ${repo} to ${currentRepoDir}"
-    git clone --mirror ssh://git@stash.hiq.se:8444/swh/${repo}.git
+    git clone --mirror https://github.com/patrickeklund/${repo}.git
     echo
     echo
     echo
