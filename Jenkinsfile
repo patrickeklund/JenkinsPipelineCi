@@ -1,4 +1,4 @@
-library identifier: 'https://github.com/patrickeklund/JenkinsPipelineCi@sharedlibraries',
+library identifier: 'JenkinsPipelineCi@sharedlibraries',
 	retriever: modernSCM(
 		[
 			$class:         'GitSCMSource' ,
