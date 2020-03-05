@@ -24,7 +24,9 @@ pipeline {
         }
         stage('Test') {
             steps {
-              echo('echo Stage build')
+                script{
+                    log.INFO("Share library message","Stage build")
+                }
             }
         }
         stage('Deliver for master') {
