@@ -1,8 +1,8 @@
 library identifier: 'https://github.com/patrickeklund/JenkinsPipelineCi@sharedlibraries',
 	retriever: modernSCM(
 		[
-			$class:         'GitSCMSource',
-			credentialsId:  patrickeklund,
+			$class:         'GitSCMSource' ,
+			credentialsId:  'patrickeklund' ,
 			remote:         'https://github.com/patrickeklund/JenkinsPipelineCi.git'
 		]
 	)
