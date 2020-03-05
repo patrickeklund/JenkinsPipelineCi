@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
 
     environment {
         CI = 'true'
@@ -8,12 +8,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'echo Stage build'
+                echo('echo Stage build')
             }
         }
         stage('Test') {
             steps {
-              bat 'echo Stage build'
+              echo('echo Stage build')
             }
         }
         stage('Deliver for master') {
@@ -21,7 +21,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                bat 'echo Stage delivery'
+                echo('echo Stage delivery')
             }
         }
         stage('Deploy for production') {
@@ -29,7 +29,7 @@ pipeline {
                 branch 'production'
             }
             steps {
-              bat 'echo Stage production'
+              echo('echo Stage production')
             }
         }
     }
