@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Deliver for master') {
             when {
-                environment name: 'BRANCH_NAME', value: 'master' }
+                environment name: 'BRANCH_NAME', value: 'master'
             }
             steps {
                 echo('echo Stage master')
