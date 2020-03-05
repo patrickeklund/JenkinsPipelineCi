@@ -25,7 +25,7 @@ pipeline {
         stage('Test') {
             steps {
                 script{
-                    log.INFO("Share library message","Stage build")
+                    log.info("Share library message","Stage build")
                 }
             }
         }
