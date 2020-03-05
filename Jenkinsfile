@@ -9,6 +9,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo('echo Stage build')
+                node("master") {
+                  bat('set')
+                }
             }
         }
         stage('Test') {
