@@ -6,11 +6,10 @@ pipeline {
     }
 
     stages {
+      node('master') {
         stage('Build') {
-        node("master") {
             steps {
                 bat 'echo Stage build'
-            }
             }
         }
         stage('Test') {
@@ -34,5 +33,6 @@ pipeline {
               bat 'echo Stage production'
             }
         }
+      }
     }
 }
