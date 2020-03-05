@@ -21,10 +21,10 @@ pipeline {
         }
         stage('Deliver for master') {
             when {
-                branch 'master'
+                environment name: 'BRANCH_NAME', value: 'master' }
             }
             steps {
-                echo('echo Stage delivery')
+                echo('echo Stage master')
             }
         }
         stage('Deploy for production') {
