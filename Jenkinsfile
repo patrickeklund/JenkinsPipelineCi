@@ -3,15 +3,14 @@ pipeline {
 
     environment {
         CI = 'true'
+        LOG_DEBUG = 'true'
     }
 
     stages {
         stage('Build') {
             steps {
                 echo('echo Stage build')
-                node("master") {
-                  bat('set')
-                }
+                getEnv()
             }
         }
         stage('Test') {
